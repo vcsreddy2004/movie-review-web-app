@@ -10,56 +10,21 @@
     <body>
         <div class="container">
             <div class="row mt-5">
-                <div class="card px-0 shadow-lg col-md-3">
-                    <div class="card-header">
-                        <h1>
-                            <img src="" alt="">
-                        </h1>
+                {% for movie in movies %}
+                    <div class="card px-0 shadow-lg col-md-3">
+                        <div class="card-header">
+                            <h1>
+                                <img src="{{movie.image.url}}" width="100%" height="100%" alt="" />
+                            </h1>
+                        </div>
+                        <div class="card-body">
+                            <h4>
+                                {{movie.name}}
+                            </h4>
+                            <span class="text-success"><i class="fas fa-caret-up"></i> Positive</span>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        Bahubali
-                    </div>
-                </div>
-                <div class="card px-0 shadow-lg col-md-3">
-                    <div class="card-header">
-                        <h1>
-                            IMG
-                        </h1>
-                    </div>
-                    <div class="card-body">
-                        Bahubali
-                    </div>
-                </div>
-                <div class="card px-0 shadow-lg col-md-3">
-                    <div class="card-header">
-                        <h1>
-                            IMG
-                        </h1>
-                    </div>
-                    <div class="card-body">
-                        kattapa
-                    </div>
-                </div>
-                <div class="card px-0 shadow-lg col-md-3">
-                    <div class="card-header">
-                        <h1>
-                            IMG
-                        </h1>
-                    </div>
-                    <div class="card-body">
-                        Bahubali
-                    </div>
-                </div>
-                <div class="card px-0 shadow-lg col-md-3">
-                    <div class="card-header">
-                        <h1>
-                            IMG
-                        </h1>
-                    </div>
-                    <div class="card-body">
-                        Bahubali
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </body>
