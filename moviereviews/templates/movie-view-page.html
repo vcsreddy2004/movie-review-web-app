@@ -1,0 +1,42 @@
+{% include "navbar.html"  %}
+{% load static %}
+<html>
+    <head>
+        <title>
+            Home
+        </title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="card col-md-3 p-0">
+                    <div class="card-header p-0">
+                        <img src="{{movieData.image.url}}" width="100%" height="100%" alt="">
+                    </div>
+                    <div class="card-body">
+                        {{movieData.name}}
+                    </div>
+                </div>
+                <div class="card col-md-9">
+                    <div class="card-header bg-dark text-white">
+                        Reviews
+                    </div>
+                    <div class="card-body d-flex flex-column align-items-end">
+                        <div class="card bg-danger text-white p-2 m-1">
+                            This is great
+                        </div>
+                        <div class="card bg-success text-white p-2 m-1">
+                            This is fantastic
+                        </div>
+                        <div class="card bg-success text-white p-2 m-1">
+                            This is blow my mind
+                        </div>
+                        <div class="card bg-success text-white p-2 m-1">
+                            This is great
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
