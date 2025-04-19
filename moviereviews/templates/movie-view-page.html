@@ -34,9 +34,18 @@
                         <div class="card bg-success text-white p-2 m-1">
                             This is great
                         </div>
+                        <div class="card col-md-12 mt-5 border-0">
+                            <div class="row">
+                                <form method="post" action="/movie/{{movieData.movieId}}/">   
+                                    {% csrf_token %}
+                                    <input type="text" class="col-md-10" name="review" />
+                                    <input type="submit" class="col-md-1 border-0 bg-success text-white" value="Post" />
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div>  
         </div>
     </body>
 </html>
